@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '../../components/ui/Header';
 import Footer from '../../components/ui/Footer';
@@ -22,13 +22,19 @@ export default function CheckoutPage() {
   });
   const [selectedAddOns, setSelectedAddOns] = useState<AddOn[]>([]);
 
+  const isFormValid = useMemo(() => {
+    const { firstName, lastName, email, phone } = bookingDetails;
+    if (!firstName.trim() || !lastName.trim() || !email.trim() || !phone.trim()) return false;
+    const emailOk = /.+@.+\..+/.test(email);
+    const phoneOk = phone.replace(/[^0-9+]/g, '').length >= 7;
+    return emailOk && phoneOk;
+  }, [bookingDetails]);
+
   useEffect(() => {
-    // Get selected vehicle from localStorage
     const vehicle = localStorage.getItem('selectedVehicle');
     if (vehicle) {
       setSelectedVehicle(JSON.parse(vehicle));
     } else {
-      // Redirect to vehicles page if no vehicle selected
       router.push('/vehicles');
     }
   }, [router]);
@@ -42,7 +48,6 @@ export default function CheckoutPage() {
   };
 
   const handleBook = () => {
-    // Here you would typically send the booking data to your backend
     const bookingData = {
       vehicle: selectedVehicle,
       customer: bookingDetails,
@@ -51,20 +56,9 @@ export default function CheckoutPage() {
     };
 
     console.log('Booking data:', bookingData);
-    
-    // Show success message or redirect to confirmation page
     alert('Booking confirmed! We will contact you soon.');
-    
-    // Clear localStorage and redirect
     localStorage.removeItem('selectedVehicle');
     router.push('/');
-  };
-
-  const calculateTotal = () => {
-    if (!selectedVehicle) return 0;
-    const basePrice = 65580; // Fixed price from Figma design
-    const addOnsPrice = selectedAddOns.filter(addOn => addOn.selected).length * 1000; // Example pricing
-    return basePrice + addOnsPrice;
   };
 
   if (!selectedVehicle) {
@@ -78,37 +72,32 @@ export default function CheckoutPage() {
     );
   }
 
-  const basePrice = 65580; // Fixed price to match Figma
+  const basePrice = 65580;
   const addOnsPrice = selectedAddOns.filter(addOn => addOn.selected).length * 1000;
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-[#F4F6F8] flex flex-col">
       <Header />
-      
-      <main className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Vehicle Details */}
-          <div className="lg:col-span-1">
-            <VehicleDetails vehicle={selectedVehicle} />
+      <main className="w-full max-w-[1920px] mx-auto px-4 xl:px-0 py-8 lg:py-10 flex-1">
+        <div className="grid gap-8 lg:gap-16 grid-cols-1 lg:grid-cols-2 items-start">
+          <div className="flex justify-end">
+            <div className="w-[475px]">
+              <VehicleDetails vehicle={selectedVehicle} />
+            </div>
           </div>
 
-          {/* Middle Column - Booking Form & Add-ons */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="w-[592px] flex flex-col gap-8">
             <BookingForm onBookingChange={handleBookingDetailsChange} />
             <AddOns onAddOnsChange={handleAddOnsChange} />
-          </div>
-
-          {/* Right Column - Order Summary */}
-          <div className="lg:col-span-1">
-            <OrderSummary 
+            <OrderSummary
               basePrice={basePrice}
               addOnsPrice={addOnsPrice}
               onBook={handleBook}
+              formValid={isFormValid}
             />
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );

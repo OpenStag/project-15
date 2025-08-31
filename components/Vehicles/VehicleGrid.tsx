@@ -12,15 +12,19 @@ const mockVehicles: Vehicle[] = [
     image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=300&fit=crop&auto=format',
     category: 'Premium',
     automatic: true,
-    price: 5300
+    price: 5300,
+    seats: 5,
+    fuelType: 'Petrol'
   },
   {
     id: '2',
     name: 'Mercedes-Benz S-Class',
     image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&h=300&fit=crop&auto=format',
-    category: 'Luxury',
+    category: 'Premium', 
     automatic: true,
-    price: 7500
+    price: 7500,
+    seats: 5,
+    fuelType: 'Petrol'
   },
   {
     id: '3',
@@ -28,15 +32,19 @@ const mockVehicles: Vehicle[] = [
     image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=400&h=300&fit=crop&auto=format',
     category: 'Premium',
     automatic: true,
-    price: 6500
+    price: 6500,
+    seats: 5,
+    fuelType: 'Automatic'
   },
   {
     id: '4',
-    name: 'Mazda CX-5',
+    name: 'Mazda CX-5', 
     image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400&h=300&fit=crop&auto=format',
-    category: 'Economy',
+    category: 'Premium',
     automatic: true,
-    price: 2300
+    price: 2300,
+    seats: 5,
+    fuelType: 'Petrol'
   },
   {
     id: '5',
@@ -44,7 +52,9 @@ const mockVehicles: Vehicle[] = [
     image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=300&fit=crop&auto=format',
     category: 'Electric',
     automatic: true,
-    price: 8500
+    price: 8500,
+    seats: 5,
+    fuelType: 'Electric'
   },
   {
     id: '6',
@@ -52,7 +62,9 @@ const mockVehicles: Vehicle[] = [
     image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=300&fit=crop&auto=format',
     category: 'Premium',
     automatic: true,
-    price: 9300
+    price: 9300,
+    seats: 9,
+    fuelType: 'Petrol'
   }
 ];
 
@@ -93,7 +105,7 @@ export default function VehicleGrid({ onVehicleBook }: VehicleGridProps) {
   const displayedVehicles = showMore ? filteredVehicles : filteredVehicles.slice(0, 6);
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-white">
       {/* Search Section */}
       <div className="container mx-auto px-4 py-8">
         <SearchBar onSearch={handleSearch} />
@@ -101,7 +113,7 @@ export default function VehicleGrid({ onVehicleBook }: VehicleGridProps) {
 
       {/* Vehicles Grid */}
       <div className="container mx-auto px-4 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {displayedVehicles.map((vehicle) => (
             <VehicleCard
               key={vehicle.id}
@@ -112,16 +124,14 @@ export default function VehicleGrid({ onVehicleBook }: VehicleGridProps) {
         </div>
 
         {/* See More Button */}
-        {filteredVehicles.length > 6 && (
-          <div className="text-center mt-8">
+        {filteredVehicles.length > 6 && !showMore && (
+      <div className="text-center mt-10">
             <button
-              onClick={() => setShowMore(!showMore)}
-              className="text-orange-500 hover:text-orange-400 font-medium flex items-center justify-center mx-auto space-x-2"
+              onClick={() => setShowMore(true)}
+        className="text-[#FF7A00] hover:text-[#ff881a] text-sm font-medium flex items-center justify-center mx-auto space-x-1"
             >
-              <span>{showMore ? 'See Less' : 'See More'}</span>
-              <span className={`transform transition-transform ${showMore ? 'rotate-180' : ''}`}>
-                ⌄
-              </span>
+        <span>See More</span>
+        <span className="text-base leading-none">⌄</span>
             </button>
           </div>
         )}
@@ -129,7 +139,7 @@ export default function VehicleGrid({ onVehicleBook }: VehicleGridProps) {
         {/* No results message */}
         {filteredVehicles.length === 0 && (
           <div className="text-center py-16">
-            <div className="text-gray-400 text-lg">
+            <div className="text-gray-600 text-lg">
               No vehicles found matching your criteria.
             </div>
             <button

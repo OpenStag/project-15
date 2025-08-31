@@ -16,7 +16,7 @@ export default function VehiclesPage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
         <VehicleGrid onVehicleBook={handleVehicleBook} />
