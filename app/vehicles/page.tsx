@@ -1,8 +1,6 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import Header from '../../components/ui/Header';
-import Footer from '../../components/ui/Footer';
 import VehicleGrid from '../../components/Vehicles/VehicleGrid';
 import { Vehicle } from '../../components/Vehicles/VehicleCard';
 
@@ -17,11 +15,9 @@ export default function VehiclesPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
       <main>
         <VehicleGrid onVehicleBook={handleVehicleBook} />
       </main>
-      <Footer />
     </div>
   );
 }

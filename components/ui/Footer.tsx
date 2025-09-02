@@ -1,88 +1,129 @@
-import Link from 'next/link';
+// components/Footer.tsx
+import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaArrowRight,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a1a2e] text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and Description */}
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold">
-                Trip<span className="text-orange-500">Go</span>
-              </span>
-            </Link>
-            <p className="text-gray-300 text-sm">
-              Drive your way,<br />
+    <div className="bg-[#111826]">
+      <footer className="max-w-7xl mx-auto px-6 py-10">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0">
+          <div className="flex flex-col space-y-2 md:w-1/4">
+            <h1 className="text-2xl font-extrabold flex items-center gap-1">
+              <span>Trip</span>
+              <span className="text-[#FF7A00]">Go</span>
+            </h1>
+            <p className="text-xs font-normal leading-tight max-w-[140px]">
+              Drive your way,
+              <br />
               anytime, anywhere.
             </p>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <div className="space-y-2">
-              <Link href="/" className="block text-gray-300 hover:text-orange-500 transition-colors text-sm">
-                Home
-              </Link>
-              <Link href="/vehicles" className="block text-gray-300 hover:text-orange-500 transition-colors text-sm">
-                Vehicles
-              </Link>
-              <Link href="/about" className="block text-gray-300 hover:text-orange-500 transition-colors text-sm">
-                About Us
-              </Link>
-              <Link href="/contact" className="block text-gray-300 hover:text-orange-500 transition-colors text-sm">
-                Contact Us
-              </Link>
-            </div>
+          <div className="flex flex-col space-y-2 md:w-1/5">
+            <h2 className="font-bold text-sm mb-2">Quick Links</h2>
+            <a
+              href="#"
+              className="text-[12px] font-normal hover:underline"
+            >
+              Home
+            </a>
+            <a
+              href="#"
+              className="text-[12px] font-normal hover:underline"
+            >
+              Vehicles
+            </a>
+            <a
+              href="#"
+              className="text-[12px] font-normal hover:underline"
+            >
+              About Us
+            </a>
+            <a
+              href="#"
+              className="text-[12px] font-normal hover:underline"
+            >
+              Contact Us
+            </a>
           </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <div className="space-y-2">
-              <Link href="/faq" className="block text-gray-300 hover:text-orange-500 transition-colors text-sm">
-                FAQs
-              </Link>
-              <Link href="#" className="block text-gray-300 hover:text-orange-500 transition-colors text-sm">
-                Terms & Conditions
-              </Link>
-              <Link href="#" className="block text-gray-300 hover:text-orange-500 transition-colors text-sm">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="block text-gray-300 hover:text-orange-500 transition-colors text-sm">
-                Customer Support
-              </Link>
-            </div>
+          <div className="flex flex-col space-y-2 md:w-1/5">
+            <h2 className="font-bold text-sm mb-2">Support</h2>
+            <a
+              href="#"
+              className="text-[12px] font-normal hover:underline"
+            >
+              FAQs
+            </a>
+            <a
+              href="#"
+              className="text-[12px] font-normal hover:underline"
+            >
+              Terms & Conditions
+            </a>
+            <a
+              href="#"
+              className="text-[12px] font-normal hover:underline"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="text-[12px] font-normal hover:underline"
+            >
+              Customer Support
+            </a>
           </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2">
-                <span className="text-sm">📞</span>
-                <span className="text-gray-300 text-sm">+94 9 9067456</span>
+          <div className="flex flex-col space-y-3 md:w-1/4">
+            <h2 className="font-bold text-sm mb-1">Contact</h2>
+            <form className="flex items-center space-x-1">
+              <input
+                type="email"
+                placeholder="Email"
+                className="text-[12px] px-2 py-1 rounded-sm text-black focus:outline-none bg-white"
+              />
+              <button
+                type="submit"
+                className="bg-[#D9D9D9] text-black p-1 rounded-sm"
+                aria-label="Submit email"
+              >
+                <FaArrowRight />
+              </button>
+            </form>
+            <div className="flex flex-col space-y-2">
+              <div className="flex items-center gap-2">
+                <FaPhoneAlt size={12} className="text-white" />
+                <p className="text-[10px] font-normal">+94 71 5872458</p>
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-sm">📍</span>
-                <span className="text-gray-300 text-sm">Colombo, Sri Lanka</span>
+              <div className="flex items-center gap-2">
+                <FaMapMarkerAlt size={12} className="text-white" />
+                <p className="text-[10px] font-normal">Colombo, Sri Lanka</p>
               </div>
-              <div className="flex space-x-3 mt-4">
-                <a href="#" className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
-                  <span className="text-sm">f</span>
-                </a>
-                <a href="#" className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
-                  <span className="text-sm">ig</span>
-                </a>
-                <a href="#" className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
-                  <span className="text-sm">x</span>
-                </a>
-              </div>
+            </div>
+            <div className="flex space-x-3 text-[#D9D9D9] text-xs">
+              <a href="#" aria-label="Facebook" className="hover:text-white">
+                <FaFacebookF />
+              </a>
+              <a href="#" aria-label="Instagram" className="hover:text-white">
+                <FaInstagram />
+              </a>
+              <a href="#" aria-label="Twitter" className="hover:text-white">
+                <FaTwitter />
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+        <hr className="border-white my-6" />
+        <p className="text-[10px] text-[#D9D9D9] text-center">
+          Copyright © 2025 Trip<span className="text-[#FF7A00]">Go</span>. All
+          rights reserved.
+        </p>
+      </footer>
+    </div>
   );
 }
