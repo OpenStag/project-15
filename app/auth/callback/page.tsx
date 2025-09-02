@@ -1,4 +1,3 @@
-// app/auth/callback/page.tsx
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
@@ -10,8 +9,7 @@ export default async function AuthCallback() {
   } = await supabase.auth.getSession();
 
   if (session) {
-    // Optional: Insert user into DB if needed
-    redirect("/dashboard"); // or wherever you want to land
+    redirect("/dashboard");
   } else {
     redirect("/auth/login");
   }
