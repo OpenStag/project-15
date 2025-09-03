@@ -19,7 +19,7 @@
   padding: 48px 40px;
   border-radius: 16px;
   width: 100%;
-  max-width: 420px;
+  max-width: 500px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -40,11 +40,16 @@
 /* Header */
 .header {
   margin-bottom: 32px;
+  width: (Hug)481px;
+  height: (Hug)92px;
+
 }
 
 .title {
   font-size: 32px;
   font-weight: 700;
+  font-family: poppins, sans-serif;
+  font-weight: 750;
   margin-bottom: 8px;
   color: #1a1a1a;
   letter-spacing: -0.5px;
@@ -55,9 +60,11 @@
 }
 
 .subtitle {
-  font-size: 18px;
-  color: #666666;
-  margin: 0;
+  font-size: 17px;
+  font-family: poppins, sans-serif;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: -5px;
   font-weight: 400;
 }
 
@@ -76,7 +83,7 @@
   justify-content: center;
   gap: 12px;
   padding: 16px 20px;
-  border: 2px solid #e5e5e5;
+  border: 2px solid #111827;
   border-radius: 12px;
   background: #ffffff;
   font-size: 16px;
@@ -89,7 +96,7 @@
 
 .authButton:hover:not(:disabled) {
   background: #f8f9fa;
-  border-color: #d0d0d0;
+  border-color: #ff6b35;
   transform: translateY(-1px);
 }
 
@@ -126,15 +133,19 @@
 /* Login Prompt */
 .loginPrompt {
   font-size: 16px;
-  color: #666666;
+  font-family: Poppins, sans-serif;
+  color: #000000;
+  font-weight: 500;
   margin: 0;
 }
 
 .loginLink {
   color: #ff6b35;
   font-weight: 600;
+  font-family: Poppins, sans-serif;
   cursor: pointer;
   transition: color 0.2s ease;
+  padding: 5px;
 }
 
 .loginLink:hover {
@@ -175,11 +186,14 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
+  font-family: poppins, sans-serif;
   color: #1a1a1a;
 }
 
 .formSubtitle {
   font-size: 16px;
+  font-family: poppins, sans-serif;
+  font-weight: 500;
   color: #666666;
   margin: 0;
 }
@@ -196,6 +210,7 @@
 .label {
   display: block;
   font-size: 14px;
+  font-family: poppins, sans-serif;
   font-weight: 500;
   color: #333333;
   margin-bottom: 6px;
@@ -229,6 +244,7 @@
   border: none;
   border-radius: 8px;
   font-size: 16px;
+  font-family: poppins, sans-serif;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -246,6 +262,8 @@
 
 .togglePrompt {
   font-size: 14px;
+  font-family: poppins, sans-serif;
+  font-weight: 500;
   color: #666666;
   margin: 0;
 }
@@ -253,6 +271,8 @@
 .toggleLink {
   color: #ff6b35;
   font-weight: 600;
+  font-family: poppins, sans-serif;
+  padding: 5px;
   cursor: pointer;
   transition: color 0.2s ease;
 }
