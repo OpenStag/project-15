@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/ui/Footer";
-import Header from "@/components/ui/Header";
+import LoginRegister from "./loginRegister";
 
 export const metadata: Metadata = {
   title: "TripGo - Vehicle Rental Platform",
@@ -30,8 +30,7 @@ export default function RootLayout({
       </head>
 
       <body className="font-geist antialiased">
-        <Header />
-        {children}
+        <LoginRegister>{children}</LoginRegister>
         <Footer />
       </body>
     </html>

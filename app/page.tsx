@@ -3,7 +3,7 @@ import { useState } from "react";
 import SignUpPopup from "../components/Popups/SignUpPopup";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(true); // Show popup by default
+  const [isOpen, setIsOpen] = useState(false); // Show popup by default
 
   return (
     <div>
