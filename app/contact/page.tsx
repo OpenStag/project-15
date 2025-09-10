@@ -22,7 +22,7 @@ export default function ContactPage() {
           <p className="text-sm text-gray-600 mb-6">
             Have a question about a vehicle, your booking, or anything else? We're here to help. Fill out the form below, and we'll get back to you as soon as possible.
           </p>
-          <form className="space-y-4">
+          <form className="space-y-4 text-black">
             <div className="flex gap-4">
               <input
                 type="text"

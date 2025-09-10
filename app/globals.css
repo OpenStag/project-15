@@ -1,3 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
+}
+
+
+/*About US Section*/
+
+/* Header Classes */
+
 .tripgo-header {
   text-align: center;
   margin: 60px 0 50px;
@@ -106,78 +138,9 @@
 /* Main Container */
 .about-us-container {
   font-family: 'Arial', sans-serif;
-  color: #333;
   max-width: 100%;
   margin: 0 auto;
   line-height: 1.6;
-}
-
-/* Navigation */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background-color: #111827;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.nav-tripgo-two-tone { display: inline-block; }
-
-.nav-trip-part, .nav-go-part {
-  font-size: 2rem;
-  font-weight: 900;
-  padding: 0 2px;
-}
-
-.nav-trip-part { color: #ffffff; }
-.nav-go-part { color: #FF5C00; }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover, .nav-links a.active { color: #FF5C00; }
-.nav-links a.active { font-weight: 600; }
-
-.login-btn {
-  background-color: #FF5C00;
-  color: white !important;
-  padding: 8px 15px;
-  border-radius: 4px;
-  font-weight: 600 !important;
-  display: inline-flex;          
-  align-items: center;           
-  gap: 8px;                      
-  text-decoration: none;         
-}
-
-.login-btn:hover {
-  background-color: #e65300;
-  transform: translateY(-2px);
-}
-
-.login-icon {
-  font-size: 1rem;   
-}
-
-
-.nav-divider {
-  height: 5px; 
-  background-color: #FF5C00; 
-  width: 100%;
-  margin: 0;
-  border: none;
 }
 
 /* Cards Section */
@@ -269,182 +232,4 @@
   font-size: 1rem;
 }
 
-/* Footer Styles */
-.modern-footer {
-  background: #111827;
-  color: white;
-  padding: 50px 40px 20px;
-  margin-top: 80px;
-}
 
-.footer-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 40px;
-  margin-bottom: 30px;
-}
-
-.footer-brand { text-align: center; }
-.footer-tripgo-two-tone { margin-bottom: 15px; }
-
-.footer-trip-part, .footer-go-part {
-  font-size: 2.2rem;
-  font-weight: 900;
-}
-
-.footer-trip-part { color: #ffffff; }
-.footer-go-part { color: #FF5C00; }
-
-.footer-tagline {
-  color: #cbd5e0;
-  font-size: 1.1rem;
-  font-style: italic;
-  margin-top: 10px;
-}
-
-.footer-columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.footer-column h4 {
-  color: #ffffff;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 12px;
-  color: #e2e8f0;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  display: flex;
-  align-items: center;
-}
-
-.footer-column ul li:hover { color: #FF5C00; }
-
-.footer-icon {
-  margin-right: 10px;
-  font-size: 1.2rem;
-  width: 24px;
-  text-align: center;
-}
-
-.social-section { text-align: center; }
-
-.social-section h4 {
-  color: #ffffff;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.social-icon:hover {
-  background: #f6f3f2;
-  transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.footer-divider {
-  height: 2px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    #fcfcfc 20%, 
-    #ffffff 80%, 
-    transparent 100%);
-  margin: 30px 0;
-  width: 100%;
-}
-
-.copyright-section { text-align: center; }
-
-.copyright-text {
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-}
-
-.copyright-part1 { color: #cbd5e0; }
-.copyright-part2 { color: #FF5C00; font-weight: 700; }
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .cards-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .footer-content { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-  .footer-columns { grid-template-columns: 1fr; gap: 30px; }
-}
-
-@media (max-width: 968px) {
-  .footer-content { flex-direction: column; align-items: center; }
-}
-
-@media (max-width: 768px) {
-  .tripgo-part1, .tripgo-part2 { font-size: 4rem; }
-  .tagline { font-size: 1.2rem; }
-  .mission-vision-container { grid-template-columns: 1fr; gap: 40px; }
-  .stats-container { grid-template-columns: 1fr; gap: 30px; }
-  .content-section, .mission-vision-container, .stats-container { padding: 0 20px; }
-  .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
-  .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
-  .modern-footer { padding: 40px 20px 15px; }
-  .footer-trip-part, .footer-go-part { font-size: 1.8rem; }
-  .social-icons { gap: 15px; }
-  .social-icon { width: 40px; height: 40px; font-size: 1.3rem; }
-  .footer-sections { flex-direction: column; align-items: center; gap: 30px; }
-  .footer-trip-part, .footer-go-part { font-size: 2rem; }
-}
-
-@media (max-width: 640px) {
-  .cards-container { grid-template-columns: 1fr; gap: 15px; padding: 0 20px; }
-  .card { padding: 25px 20px; }
-  .card-icon { width: 80px; height: 80px; margin-bottom: 15px; }
-  .icon-img { width: 50px; height: 50px; }
-}
-
-@media (max-width: 480px) {
-  .tripgo-part1, .tripgo-part2 { font-size: 3rem; }
-  .tagline { font-size: 1rem; }
-  .section-title { font-size: 1.5rem; }
-  .section-text { font-size: 1rem; }
-  .mission-section h3, .vision-section h3 { font-size: 1.5rem; }
-  .nav-links { flex-direction: column; gap: 10px; }
-  .nav-links a { padding: 5px 0; }
-  .mission-section p, .vision-section p { max-width: 100%; }
-  .footer-trip-part, .footer-go-part { font-size: 1.6rem; }
-  .footer-column h4 { font-size: 1.1rem; }
-  .footer-column ul li { font-size: 0.9rem; }
-  .social-icon { width: 35px; height: 35px; font-size: 1.1rem; }
-  .footer-trip-part, .footer-go-part { font-size: 1.8rem; }
-  .footer-tagline { font-size: 1rem; }
-}

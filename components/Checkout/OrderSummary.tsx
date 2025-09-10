@@ -55,7 +55,7 @@ export default function OrderSummary({ basePrice, addOnsPrice = 0, onBook, formV
         <button
           onClick={accepted && formValid ? onBook : undefined}
           disabled={!formValid || !accepted}
-          className={`w-[580px] h-[64px] rounded-[10px] font-semibold text-[36px] transition-colors ${
+          className={`w-[554px] h-[64px] rounded-[10px] font-semibold text-[36px] transition-colors ${
             formValid && accepted
               ? 'bg-[#FF5C00] hover:bg-orange-600 text-white'
               : 'bg-gray-300 text-gray-500 cursor-not-allowed'

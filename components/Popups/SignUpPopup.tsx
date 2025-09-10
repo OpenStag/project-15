@@ -114,7 +114,7 @@ const SignUpPopup = ({ isOpen, onClose }: SignUpPopupProps) => {
             {/* Header */}
             <div className={styles.header}>
               <h2 className={styles.title}>
-                Welcome To Trp<span className={styles.orange}>Go</span>
+                Welcome To Trip<span className={styles.orange}>Go</span>
               </h2>
               <p className={styles.subtitle}>
                 Create an Account to get started
