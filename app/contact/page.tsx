@@ -20,7 +20,7 @@ export default function ContactPage() {
         <div className="w-full md:w-1/2 bg-white rounded-lg p-6 flex flex-col">
           <h2 className="text-3xl font-bold mb-2 text-[#1a2433]">Get in Touch...</h2>
           <p className="text-sm text-gray-600 mb-6">
-            Have a question about a vehicle, your booking, or anything else? We're here to help. Fill out the form below, and we'll get back to you as soon as possible.
+            Have a question about a vehicle, your booking, or anything else? We&#39;re here to help. Fill out the form below, and we&#39;ll get back to you as soon as possible.
           </p>
           <form className="space-y-4 text-black">
             <div className="flex gap-4">
