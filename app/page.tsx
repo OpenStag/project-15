@@ -161,7 +161,7 @@ export default function Home() {
       Trusted by Thousands of <span className="text-orange-500">Happy Riders</span>
     </h2>
     <p className="text-center text-gray-600 text-lg mb-12">
-      "Here's what our customers say about their experience."
+      &apos;Here&#39;s what our customers say about their experience.&apos;
     </p>
     
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
@@ -176,11 +176,11 @@ export default function Home() {
           <h3 className="text-xl font-bold text-center">Michael R.</h3>
         </div>
         <div className="mb-6">
-          <span className="text-orange-500 text-2xl">"</span>
+          <span className="text-orange-500 text-2xl">&apos;</span>
           <p className="text-gray-700 text-center px-2">
             Smooth booking process and the car was in great condition. Made my business trip stress-free.
           </p>
-          <span className="text-orange-500 text-2xl float-right">"</span>
+          <span className="text-orange-500 text-2xl float-right">&apos;</span>
         </div>
         <div className="flex justify-center space-x-1">
           {[...Array(5)].map((_, i) => (
@@ -200,11 +200,11 @@ export default function Home() {
           <h3 className="text-xl font-bold text-center">Amelia W.</h3>
         </div>
         <div className="mb-6">
-          <span className="text-orange-500 text-2xl">"</span>
+          <span className="text-orange-500 text-2xl">&apos;</span>
           <p className="text-gray-700 text-center px-2">
             I loved how quick and easy it was to rent. The car was clean, comfortable, and fuel-efficient.
           </p>
-          <span className="text-orange-500 text-2xl float-right">"</span>
+          <span className="text-orange-500 text-2xl float-right">&apos;</span>
         </div>
         <div className="flex justify-center space-x-1">
           {[...Array(4)].map((_, i) => (
@@ -224,11 +224,11 @@ export default function Home() {
           <h3 className="text-xl font-bold text-center">The Johnson Family</h3>
         </div>
         <div className="mb-6">
-          <span className="text-orange-500 text-2xl">"</span>
+          <span className="text-orange-500 text-2xl">&apos;</span>
           <p className="text-gray-700 text-center px-2">
             Perfect spacious vehicle for our weekend getaway. Safe, reliable, and excellent service.
           </p>
-          <span className="text-orange-500 text-2xl float-right">"</span>
+          <span className="text-orange-500 text-2xl float-right">&apos;</span>
         </div>
         <div className="flex justify-center space-x-1">
           {[...Array(5)].map((_, i) => (

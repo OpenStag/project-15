@@ -17,7 +17,7 @@ export default function AboutPage() {
         <p className="section-text">
           At TripGo Rentals, we believe car rentals should be simple, affordable, and stress-free. 
           What started as a small local service has grown into a trusted platform for travelers 
-          and professionals alike. Whether it's a quick city ride or a luxury weekend getaway, 
+          and professionals alike. Whether it&#39;s a quick city ride or a luxury weekend getaway, 
           we provide vehicles that fit every lifestyle.
         </p>
       </section>
