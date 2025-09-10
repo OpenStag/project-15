@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
@@ -24,3 +24,212 @@ body {
   color: var(--foreground);
   font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
 }
+
+
+/*About US Section*/
+
+/* Header Classes */
+
+.tripgo-header {
+  text-align: center;
+  margin: 60px 0 50px;
+  padding: 0 20px;
+}
+
+.tripgo-two-tone {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.tripgo-part1, .tripgo-part2 {
+  font-size: 7rem;
+  font-weight: 800;
+  padding: 0 5px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.tripgo-part1 { color: #000000; }
+.tripgo-part2 { color: #FF5C00; }
+
+.tagline {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Content Sections */
+.content-section {
+  margin: 40px auto;
+  padding: 0 40px;
+  max-width: 900px;
+}
+
+.section-title {
+  color: #111827;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.section-text {
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Mission & Vision Sections */
+.mission-vision-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 0 40px;
+}
+
+.mission-section, .vision-section {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mission-section h3, .vision-section h3 {
+  color: #111827;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.mission-section p, .vision-section p {
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Light Divider */
+.light-divider {
+  height: 1px;
+  background-color: #848484;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 900px;
+}
+
+/* Main Container */
+.about-us-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Cards Section */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+.card {
+  background: rgb(216, 216, 216);
+  border-radius: 12px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(216, 216, 216);
+  border-radius: 50%;
+}
+
+.icon-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.card-content h4 {
+  color: #111827;
+  font-size: 1.6rem;
+  font-weight: 750;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-content p {
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Stats Section */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 0 40px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-top: 3px solid #FF5C00;
+}
+
+.stat-item h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-item p {
+  color: #666;
+  font-size: 1rem;
+}
+
+

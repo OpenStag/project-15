@@ -98,7 +98,7 @@ export default function BookingForm({ onBookingChange }: BookingFormProps) {
             rows={4}
             value={details.message}
             onChange={(e) => handleInputChange('message', e.target.value)}
-            className="w-[581px] h-[82px] px-3 py-2 bg-[#ECEBEB] border border-transparent rounded-[5px] focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500 text-[13px] resize-none"
+            className="w-[554px] h-[82px] px-3 py-2 bg-[#ECEBEB] border border-transparent rounded-[5px] focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500 text-[13px] resize-none"
           />
         </div>
       </div>
