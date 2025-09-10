@@ -90,7 +90,7 @@ export default function Home() {
 {/* Choose the Ride Section */}
 <section className="py-12 px-6 mx-6 my-8">
   <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl font-bold text-center mb-12">
+    <h2 className="text-4xl font-bold text-black text-center mb-12">
       Choose the <span className="text-orange-500">Ride</span> That Fits You <span className="text-orange-500">Best</span>
     </h2>
     
@@ -157,14 +157,14 @@ export default function Home() {
   </div>
   
   <div className="relative z-10 max-w-6xl mx-auto">
-    <h2 className="text-4xl font-bold text-center mb-4">
+    <h2 className="text-4xl font-bold text-center mb-4 text-black">
       Trusted by Thousands of <span className="text-orange-500">Happy Riders</span>
     </h2>
     <p className="text-center text-gray-600 text-lg mb-12">
       "Here's what our customers say about their experience."
     </p>
     
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
       {/* Michael R. Review */}
       <div className="bg-white rounded-2xl p-6 shadow-lg">
         <div className="flex flex-col items-center mb-6">
@@ -242,7 +242,7 @@ export default function Home() {
 
 {/* Why Ride With Us Section */}
 <section className="py-12 px-6 mx-6 my-8">
-  <div className="max-w-6xl mx-auto">
+  <div className="max-w-6xl mx-auto text-black">
     <h2 className="text-4xl font-bold text-center mb-4">
       Why <span className="text-orange-500">Ride</span> With Us?
     </h2>
