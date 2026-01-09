@@ -14,7 +14,7 @@
     "client-only": "^0.0.1",
     "lucide-react": "^0.543.0",
     "nanoid": "^5.1.5",
-    "next": "^15.5.2",
+    "next": "15.5.9",
     "picocolors": "^1.1.1",
     "project-15": "file:",
     "react": "^19.1.0",
